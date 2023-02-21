@@ -1,0 +1,1185 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "authtoken",
+        "model": "token"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "authtoken",
+        "model": "tokenproxy"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "ml_models",
+        "model": "feature"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "ml_models",
+        "model": "scoring"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "ml_models",
+        "model": "competitionmodel"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "ml_models",
+        "model": "traintestsplit"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "classroom",
+        "model": "cohort"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "classroom",
+        "model": "participant"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "classroom",
+        "model": "submission"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 1,
+    "fields": {
+        "name": "householdsize",
+        "comment": "Average number of people per household in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.268Z",
+        "modified_date": "2021-05-19T03:49:52.268Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 2,
+    "fields": {
+        "name": "agePct12t21",
+        "comment": "Percentage of population between ages 12-21 years in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.299Z",
+        "modified_date": "2021-05-19T03:49:52.299Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 3,
+    "fields": {
+        "name": "agePct12t29",
+        "comment": "Percentage of population between ages 12-29 years in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.307Z",
+        "modified_date": "2021-05-19T03:49:52.307Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 4,
+    "fields": {
+        "name": "agePct16t24",
+        "comment": "Percentage of population between ages 16-24 years in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.313Z",
+        "modified_date": "2021-05-19T03:49:52.313Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 5,
+    "fields": {
+        "name": "agePct65up",
+        "comment": "Percentage of population of/over age 65 years in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.320Z",
+        "modified_date": "2021-05-19T03:49:52.320Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 6,
+    "fields": {
+        "name": "numbUrban",
+        "comment": "Number of people living in areas classified as urban in a given community (integer).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.326Z",
+        "modified_date": "2021-05-19T03:49:52.326Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 7,
+    "fields": {
+        "name": "pctUrban",
+        "comment": "Percentage of people living in areas classified as urban in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.333Z",
+        "modified_date": "2021-05-19T03:49:52.333Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 8,
+    "fields": {
+        "name": "medIncome",
+        "comment": "Median household income in a given community (integer or decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.339Z",
+        "modified_date": "2021-05-19T03:49:52.339Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 9,
+    "fields": {
+        "name": "pctWWage",
+        "comment": "Percentage of households with wage or salary income in 1989 in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.345Z",
+        "modified_date": "2021-05-19T03:49:52.345Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 10,
+    "fields": {
+        "name": "pctWFarmSelf",
+        "comment": "Percentage of households with farm or self employment income in 1989 in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.364Z",
+        "modified_date": "2021-05-19T03:49:52.364Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 11,
+    "fields": {
+        "name": "pctWInvInc",
+        "comment": "Percentage of households with investment / rent income in 1989 in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.371Z",
+        "modified_date": "2021-05-19T03:49:52.371Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 12,
+    "fields": {
+        "name": "pctWSocSec",
+        "comment": "Percentage of households with social security income in 1989 in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.377Z",
+        "modified_date": "2021-05-19T03:49:52.377Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 13,
+    "fields": {
+        "name": "pctWPubAsst",
+        "comment": "Percentage of households with public assistance income in 1989 in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.383Z",
+        "modified_date": "2021-05-19T03:49:52.383Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 14,
+    "fields": {
+        "name": "pctWRetire",
+        "comment": "Percentage of households with retirement income in 1989 in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.390Z",
+        "modified_date": "2021-05-19T03:49:52.390Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 15,
+    "fields": {
+        "name": "medFamInc",
+        "comment": "Median family income in a given community (integer). Differs from household income for non-family households.",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.396Z",
+        "modified_date": "2021-05-19T03:49:52.396Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 16,
+    "fields": {
+        "name": "perCapInc",
+        "comment": "Per capita income in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.403Z",
+        "modified_date": "2021-05-19T03:49:52.403Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 17,
+    "fields": {
+        "name": "NumUnderPov",
+        "comment": "Number of people living under the poverty level in a given community (integer).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.412Z",
+        "modified_date": "2021-05-19T03:49:52.412Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 18,
+    "fields": {
+        "name": "PctPopUnderPov",
+        "comment": "Percentage of people living under the poverty level in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.436Z",
+        "modified_date": "2021-05-19T03:49:52.436Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 19,
+    "fields": {
+        "name": "PctLess9thGrade",
+        "comment": "Percentage of people aged 25 years and over with less than a 9th grade education in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.444Z",
+        "modified_date": "2021-05-19T03:49:52.444Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 20,
+    "fields": {
+        "name": "PctNotHSGrad",
+        "comment": "Percentage of people aged 25 years and over that are not high school graduates in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.452Z",
+        "modified_date": "2021-05-19T03:49:52.452Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 21,
+    "fields": {
+        "name": "PctBSorMore",
+        "comment": "Percentage of people aged 25 years and over with a bachelors degree or higher education in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.460Z",
+        "modified_date": "2021-05-19T03:49:52.460Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 22,
+    "fields": {
+        "name": "PctUnemployed",
+        "comment": "Percentage of people aged 16 years and over, in the labor force, and unemployed in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.467Z",
+        "modified_date": "2021-05-19T03:49:52.467Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 23,
+    "fields": {
+        "name": "PctEmploy",
+        "comment": "Percentage of people aged 16 years and over who are employed in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.477Z",
+        "modified_date": "2021-05-19T03:49:52.477Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 24,
+    "fields": {
+        "name": "PctEmplManu",
+        "comment": "Percentage of people aged 16 years and over who are employed in manufacturing in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.505Z",
+        "modified_date": "2021-05-19T03:49:52.505Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 25,
+    "fields": {
+        "name": "PctEmplProfServ",
+        "comment": "Percentage of people aged 16 years and over who are employed in professional services in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.511Z",
+        "modified_date": "2021-05-19T03:49:52.511Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 26,
+    "fields": {
+        "name": "PctOccupManu",
+        "comment": "Percentage of people aged 16 years and over who are employed in manufacturing (decimal). May include unemployed manufacturing workers.",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.518Z",
+        "modified_date": "2021-05-19T03:49:52.518Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 27,
+    "fields": {
+        "name": "PctOccupMgmtProf",
+        "comment": "Percentage of people aged 16 years and over who are employed in management or professional occupations in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.524Z",
+        "modified_date": "2021-05-19T03:49:52.524Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 28,
+    "fields": {
+        "name": "MalePctDivorce",
+        "comment": "Percentage of males who are divorced in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.531Z",
+        "modified_date": "2021-05-19T03:49:52.531Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 29,
+    "fields": {
+        "name": "MalePctNevMarr",
+        "comment": "Percentage of males who have never married in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.539Z",
+        "modified_date": "2021-05-19T03:49:52.539Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 30,
+    "fields": {
+        "name": "FemalePctDiv",
+        "comment": "Percentage of females who are divorced in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.563Z",
+        "modified_date": "2021-05-19T03:49:52.563Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 31,
+    "fields": {
+        "name": "TotalPctDiv",
+        "comment": "Percentage of population who are divorced in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.569Z",
+        "modified_date": "2021-05-19T03:49:52.569Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 32,
+    "fields": {
+        "name": "PersPerFam",
+        "comment": "Average number of people per family in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.576Z",
+        "modified_date": "2021-05-19T03:49:52.576Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 33,
+    "fields": {
+        "name": "PctFam2Par",
+        "comment": "Percentage of families (with children) that are headed by two parents in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.583Z",
+        "modified_date": "2021-05-19T03:49:52.583Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 34,
+    "fields": {
+        "name": "PctKids2Par",
+        "comment": "",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.601Z",
+        "modified_date": "2021-05-19T03:49:52.601Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 35,
+    "fields": {
+        "name": "PctYoungKids2Par",
+        "comment": "",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.607Z",
+        "modified_date": "2021-05-19T03:49:52.607Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 36,
+    "fields": {
+        "name": "PctTeen2Par",
+        "comment": "Percentage of children aged 12-17 years in two parent households in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.613Z",
+        "modified_date": "2021-05-19T03:49:52.614Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 37,
+    "fields": {
+        "name": "PctWorkMomYoungKids",
+        "comment": "",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.620Z",
+        "modified_date": "2021-05-19T03:49:52.620Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 38,
+    "fields": {
+        "name": "PctWorkMom",
+        "comment": "Percentage of mothers of children aged under 18 years in labor force in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.626Z",
+        "modified_date": "2021-05-19T03:49:52.626Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 39,
+    "fields": {
+        "name": "NumKidsBornNeverMar",
+        "comment": "",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.633Z",
+        "modified_date": "2021-05-19T03:49:52.633Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 40,
+    "fields": {
+        "name": "PctKidsBornNeverMar",
+        "comment": "",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.639Z",
+        "modified_date": "2021-05-19T03:49:52.639Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 41,
+    "fields": {
+        "name": "PctLargHouseFam",
+        "comment": "Percentage of family households that are large (6 or more individuals) in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.646Z",
+        "modified_date": "2021-05-19T03:49:52.646Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 42,
+    "fields": {
+        "name": "PctLargHouseOccup",
+        "comment": "Percentage of all occupied households that are large (6 or more individuals) in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.670Z",
+        "modified_date": "2021-05-19T03:49:52.670Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 43,
+    "fields": {
+        "name": "PersPerOccupHous",
+        "comment": "Average number of persons per household in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.677Z",
+        "modified_date": "2021-05-19T03:49:52.677Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 44,
+    "fields": {
+        "name": "PersPerOwnOccHous",
+        "comment": "Average number of persons per owner occupied household in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.683Z",
+        "modified_date": "2021-05-19T03:49:52.683Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 45,
+    "fields": {
+        "name": "PersPerRentOccHous",
+        "comment": "Average number of persons per rental household in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.690Z",
+        "modified_date": "2021-05-19T03:49:52.690Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 46,
+    "fields": {
+        "name": "PctPersOwnOccup",
+        "comment": "Percentage of people in owner occupied households in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.696Z",
+        "modified_date": "2021-05-19T03:49:52.696Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 47,
+    "fields": {
+        "name": "PctPersDenseHous",
+        "comment": "Percentage of persons in dense housing (more than 1 person per room) in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.705Z",
+        "modified_date": "2021-05-19T03:49:52.705Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 48,
+    "fields": {
+        "name": "PctHousLess3BR",
+        "comment": "Percentage of housing units with less than 3 bedrooms in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.711Z",
+        "modified_date": "2021-05-19T03:49:52.711Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 49,
+    "fields": {
+        "name": "MedNumBR",
+        "comment": "Median number of bedrooms within households in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.725Z",
+        "modified_date": "2021-05-19T03:49:52.725Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 50,
+    "fields": {
+        "name": "HousVacant",
+        "comment": "Number of vacant households in a given community (integer).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.732Z",
+        "modified_date": "2021-05-19T03:49:52.732Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 51,
+    "fields": {
+        "name": "PctHousOccup",
+        "comment": "Percentage of housing occupied in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.738Z",
+        "modified_date": "2021-05-19T03:49:52.738Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 52,
+    "fields": {
+        "name": "PctHousOwnOcc",
+        "comment": "Percentage of households that are owner occupied in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.744Z",
+        "modified_date": "2021-05-19T03:49:52.744Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 53,
+    "fields": {
+        "name": "PctVacantBoarded",
+        "comment": "Percentage of vacant housing that is boarded up in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.751Z",
+        "modified_date": "2021-05-19T03:49:52.751Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 54,
+    "fields": {
+        "name": "PctVacMore6Mos",
+        "comment": "Percentage of vacant housing that has been vacant more than 6 months in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.757Z",
+        "modified_date": "2021-05-19T03:49:52.757Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 55,
+    "fields": {
+        "name": "MedYrHousBuilt",
+        "comment": "Median year that housing units were built age in a given community (integer).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.763Z",
+        "modified_date": "2021-05-19T03:49:52.763Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 56,
+    "fields": {
+        "name": "PctHousNoPhone",
+        "comment": "Percentage of occupied housing units without phone in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.769Z",
+        "modified_date": "2021-05-19T03:49:52.769Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 57,
+    "fields": {
+        "name": "PctWOFullPlumb",
+        "comment": "Percentage of housing without complete plumbing facilities in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.793Z",
+        "modified_date": "2021-05-19T03:49:52.793Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 58,
+    "fields": {
+        "name": "OwnOccLowQuart",
+        "comment": "Owner occupied housing in a given community (lower quartile value; decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.799Z",
+        "modified_date": "2021-05-19T03:49:52.799Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 59,
+    "fields": {
+        "name": "OwnOccMedVal",
+        "comment": "Owner occupied housing in a given community (median value; decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.806Z",
+        "modified_date": "2021-05-19T03:49:52.806Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 60,
+    "fields": {
+        "name": "OwnOccHiQuart",
+        "comment": "Owner occupied housing in a given community (upper quartile value; decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.812Z",
+        "modified_date": "2021-05-19T03:49:52.812Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 61,
+    "fields": {
+        "name": "OwnOccQrange",
+        "comment": "Owner occupied housing in a given community (difference between upper quartile and lower quartile values; decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.818Z",
+        "modified_date": "2021-05-19T03:49:52.818Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 62,
+    "fields": {
+        "name": "RentLowQ",
+        "comment": "Rental housing in a given community (lower quartile rent; decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.825Z",
+        "modified_date": "2021-05-19T03:49:52.825Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 63,
+    "fields": {
+        "name": "RentMedian",
+        "comment": "Rental housing in a given community (median rent; decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.831Z",
+        "modified_date": "2021-05-19T03:49:52.831Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 64,
+    "fields": {
+        "name": "RentHighQ",
+        "comment": "Rental housing in a given community (upper quartile rent; decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.839Z",
+        "modified_date": "2021-05-19T03:49:52.839Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 65,
+    "fields": {
+        "name": "RentQrange",
+        "comment": "Rental housing in a given community (difference between upper quartile and lower quartile rent; decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.871Z",
+        "modified_date": "2021-05-19T03:49:52.871Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 66,
+    "fields": {
+        "name": "MedRent",
+        "comment": "Median gross rent in a given community (includes utilities; decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.886Z",
+        "modified_date": "2021-05-19T03:49:52.886Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 67,
+    "fields": {
+        "name": "MedRentPctHousInc",
+        "comment": "Median gross rent as a percentage of household income in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.894Z",
+        "modified_date": "2021-05-19T03:49:52.894Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 68,
+    "fields": {
+        "name": "MedOwnCostPctInc",
+        "comment": "Median owners cost as a percentage of household income for owners with a mortgage in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.900Z",
+        "modified_date": "2021-05-19T03:49:52.900Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 69,
+    "fields": {
+        "name": "MedOwnCostPctIncNoMtg",
+        "comment": "Median owners cost as a percentage of household income for owners without a mortgage in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.910Z",
+        "modified_date": "2021-05-19T03:49:52.910Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 70,
+    "fields": {
+        "name": "NumInShelters",
+        "comment": "Number of people in homeless shelters in a given community (integer).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.919Z",
+        "modified_date": "2021-05-19T03:49:52.919Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 71,
+    "fields": {
+        "name": "NumStreet",
+        "comment": "Number of homeless people counted in the street in a given community (integer).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.928Z",
+        "modified_date": "2021-05-19T03:49:52.928Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 72,
+    "fields": {
+        "name": "PctBornSameState",
+        "comment": "Percentage of people born in the same state as currently living in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.941Z",
+        "modified_date": "2021-05-19T03:49:52.941Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 73,
+    "fields": {
+        "name": "PctSameHouse85",
+        "comment": "Percentage of people living in the same house for the previous 5 years in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.975Z",
+        "modified_date": "2021-05-19T03:49:52.975Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 74,
+    "fields": {
+        "name": "PctSameCity85",
+        "comment": "Percentage of people living in the same city for the previous 5 years in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:52.990Z",
+        "modified_date": "2021-05-19T03:49:52.990Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 75,
+    "fields": {
+        "name": "PctSameState85",
+        "comment": "Percentage of people living in the same state for the previous 5 years in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.002Z",
+        "modified_date": "2021-05-19T03:49:53.002Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 76,
+    "fields": {
+        "name": "LemasSwornFT",
+        "comment": "Number of sworn full time police officers in a given community (integer).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.013Z",
+        "modified_date": "2021-05-19T03:49:53.013Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 77,
+    "fields": {
+        "name": "LemasSwFTPerPop",
+        "comment": "Sworn full time police officers per 100,000 population in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.025Z",
+        "modified_date": "2021-05-19T03:49:53.025Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 78,
+    "fields": {
+        "name": "LemasSwFTFieldOps",
+        "comment": "Number of sworn full time police officers in field operations in a given community (i.e. on the street as opposed to administrative; integer).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.036Z",
+        "modified_date": "2021-05-19T03:49:53.036Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 79,
+    "fields": {
+        "name": "LemasSwFTFieldPerPop",
+        "comment": "Sworn full time police officers in field operations per 100,000 population in a given community (i.e. on the street as opposed to administrative; decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.051Z",
+        "modified_date": "2021-05-19T03:49:53.051Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 80,
+    "fields": {
+        "name": "LemasTotalReq",
+        "comment": "Total number of requests for police in a given community in a given year (integer).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.064Z",
+        "modified_date": "2021-05-19T03:49:53.064Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 81,
+    "fields": {
+        "name": "LemasTotReqPerPop",
+        "comment": "Total number of requests for police per 100,000 popuation in a given community in a given year (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.082Z",
+        "modified_date": "2021-05-19T03:49:53.082Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 82,
+    "fields": {
+        "name": "PolicReqPerOffic",
+        "comment": "Total number of requests for police per police officer in a given community in a given year (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.096Z",
+        "modified_date": "2021-05-19T03:49:53.096Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 83,
+    "fields": {
+        "name": "PolicPerPop",
+        "comment": "Number of police officers per 100,000 population in a given community in a given year (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.112Z",
+        "modified_date": "2021-05-19T03:49:53.112Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 84,
+    "fields": {
+        "name": "OfficAssgnDrugUnits",
+        "comment": "Number of police officers assigned to special drug units in a given community (integer).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.128Z",
+        "modified_date": "2021-05-19T03:49:53.128Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 85,
+    "fields": {
+        "name": "NumKindsDrugsSeiz",
+        "comment": "Number of different kinds of drugs seized in a given community in a given year (integer).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.144Z",
+        "modified_date": "2021-05-19T03:49:53.144Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 86,
+    "fields": {
+        "name": "PolicAveOTWorked",
+        "comment": "Average number of police officers who worked overtime in a given community in a given year (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.158Z",
+        "modified_date": "2021-05-19T03:49:53.158Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 87,
+    "fields": {
+        "name": "LandArea",
+        "comment": "Land area in square miles in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.168Z",
+        "modified_date": "2021-05-19T03:49:53.168Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 88,
+    "fields": {
+        "name": "PopDens",
+        "comment": "Population density in persons per square mile in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.175Z",
+        "modified_date": "2021-05-19T03:49:53.175Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 89,
+    "fields": {
+        "name": "PctUsePubTrans",
+        "comment": "Percentage of people using public transit for commuting in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.204Z",
+        "modified_date": "2021-05-19T03:49:53.204Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 90,
+    "fields": {
+        "name": "PolicCars",
+        "comment": "Number of police cars in a given community (integer).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.211Z",
+        "modified_date": "2021-05-19T03:49:53.211Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 91,
+    "fields": {
+        "name": "PolicOperBudg",
+        "comment": "Police operating budget in a given community (integer).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.219Z",
+        "modified_date": "2021-05-19T03:49:53.219Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 92,
+    "fields": {
+        "name": "LemasPctPolicOnPatr",
+        "comment": "Percentage of sworn full time police officers on patrol in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.226Z",
+        "modified_date": "2021-05-19T03:49:53.226Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 93,
+    "fields": {
+        "name": "LemasGangUnitDeploy",
+        "comment": "Gang units deployed in a given community (0 means NO, 10 means YES, 5 means Part Time).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.279Z",
+        "modified_date": "2021-05-19T03:49:53.279Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 94,
+    "fields": {
+        "name": "LemasPctOfficDrugUn",
+        "comment": "Percentage of police officers assigned to drug units in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.294Z",
+        "modified_date": "2021-05-19T03:49:53.294Z"
+    }
+},
+{
+    "model": "ml_models.feature",
+    "pk": 95,
+    "fields": {
+        "name": "PolicBudgPerPop",
+        "comment": "Police operating budget per person in population in a given community (decimal).",
+        "data_source": "CommunityViolations",
+        "created_date": "2021-05-19T03:49:53.304Z",
+        "modified_date": "2021-05-19T03:49:53.304Z"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$n1xwf2hdJCJz8P61rUNGCd$vOvqPP5ktLz6Iv2JwRjl2135RlRUb1NF6/3NaZa4SE0=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@ic.ac.uk",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-05-19T03:51:17.997Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

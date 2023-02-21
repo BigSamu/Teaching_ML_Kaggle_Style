@@ -1,0 +1,35 @@
+{
+    "listeners": {
+        "*:80": {
+            "pass": "routes"
+        }
+    },
+
+    "routes": [
+        {
+            "match": {
+                "uri": "/static/*"
+            },
+
+            "action": {
+                "share": "/app"
+            }
+        },
+        {
+            "action": {
+                "pass": "applications/django"
+            }
+        }
+    ],
+
+    "applications": {
+        "django": {
+            "type": "python 3.9",
+            "path": "/app",
+            "module": "backend.asgi",
+            "environment": {
+                "DJANGO_SETTINGS_MODULE": "backend.prod_settings"
+            }
+        }
+    }
+}

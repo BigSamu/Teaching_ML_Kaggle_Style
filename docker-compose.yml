@@ -1,0 +1,41 @@
+version: "3"
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - pg-data:/var/lib/postgresql/data/
+    deploy:
+      placement:
+        constraints:
+          - node.labels.db-role == primary
+
+  backend:
+    build: ./backend
+    image: cloud-vm-43-106.doc.ic.ac.uk:8080/teachingml/backend:icl
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      SECRET_KEY: ")cp0wm_7w!#h6vzdonz_ia73j85kmfy3^@zy6-jqt+l6382*iv"
+      DB_URL: "postgres://postgres@db/teachingml"
+
+      SRV_HOSTNAME: "cloud-vm-43-106.doc.ic.ac.uk"
+      CORS_WHITELIST: "http://ml101-cpg.doc.ic.ac.uk"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        API_URL: "http://cloud-vm-43-106.doc.ic.ac.uk"
+    image: cloud-vm-43-106.doc.ic.ac.uk:8080/teachingml/frontend:icl
+
+    restart: always
+    ports:
+      - "5000:5000"
+volumes:
+  pg-data:

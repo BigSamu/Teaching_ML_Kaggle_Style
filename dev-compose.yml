@@ -1,0 +1,35 @@
+version: "3"
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - pg-data:/var/lib/postgresql/data/
+
+  backend:
+    image: python:3.9
+    working_dir: /app
+    command: "tail -f /dev/null"
+    environment:
+      SECRET_KEY: ")cp0wm_7w!#h6vzdonz_ia73j85kmfy3^@zy6-jqt+l6382*iv"
+      DB_URL: "postgres://postgres@db/teachingml"
+      SRV_HOSTNAME: "localhost"
+      CORS_WHITELIST: "http://localhost:8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    image: node:16
+    working_dir: /app
+    command: "tail -f /dev/null"
+    environment:
+        REACT_APP_API_SERVER: "http://localhost:8000"
+    ports:
+      - "7000:3000"
+    volumes:
+      - ./frontend:/app
+volumes:
+  pg-data:

@@ -1,0 +1,149 @@
+-- communityname: Name of given community. 
+-- state: US state in which given community is located (two-letter postal abbreviation). 
+-- countyCode: Numeric code of county in which a given community is located (integer). The code represents the Federal Information Processing Standard Publication (FIPS) code that was used to identify counties. 
+-- communityCode: Numeric code of given community (integer). The code represents the Federal Information Processing Standard Publication (FIPS) code that was used to identify communities. 
+-- fold: Fold number for non-random 10 fold cross validation, potentially useful for debugging, paired tests (integer). 
+
+-- population: Population size of a given community (integer). 
+-- householdsize: Average number of people per household in a given community (decimal). 
+-- racepctblack: Percentage of population that is african american in a given community (decimal). 
+-- racePctWhite: Percentage of population that is caucasian in a given community (decimal). 
+-- racePctAsian: Percentage of population that is of asian heritage in a given community (decimal). 
+-- racePctHisp: Percentage of population that is of hispanic heritage in a given community (decimal). 
+-- agePct12t21: Percentage of population between ages 12-21 years in a given community (decimal). 
+-- agePct12t29: Percentage of population between ages 12-29 years in a given community (decimal). 
+-- agePct16t24: Percentage of population between ages 16-24 years in a given community (decimal). 
+-- agePct65up: Percentage of population of/over age 65 years in a given community (decimal).
+-- numbUrban: Number of people living in areas classified as urban in a given community (integer). 
+-- pctUrban: Percentage of people living in areas classified as urban in a given community (decimal). 
+-- medIncome: Median household income in a given community (integer or decimal).
+-- pctWWage: Percentage of households with wage or salary income in 1989 in a given community (decimal).
+-- pctWFarmSelf: Percentage of households with farm or self employment income in 1989 in a given community (decimal). 
+-- pctWInvInc: Percentage of households with investment / rent income in 1989 in a given community (decimal). 
+-- pctWSocSec: Percentage of households with social security income in 1989 in a given community (decimal).
+-- pctWPubAsst: Percentage of households with public assistance income in 1989 in a given community (decimal). 
+-- pctWRetire: Percentage of households with retirement income in 1989 in a given community (decimal).
+-- medFamInc: Median family income in a given community (integer). Differs from household income for non-family households. 
+-- perCapInc: Per capita income in a given community (decimal).
+-- whitePerCap: Per capita income for caucasians in a given community (decimal). 
+-- blackPerCap: Per capita income for african americans in a given community (decimal).
+-- indianPerCap: Per capita income for native americans in a given community (decimal).
+-- AsianPerCap: Per capita income for people with asian heritage in a given community (decimal).
+-- OtherPerCap: Per capita income for people with 'other' heritage in a given community (decimal).
+-- HispPerCap: Per capita income for people with hispanic heritage in a given community (decimal).
+-- NumUnderPov: Number of people living under the poverty level in a given community (integer).
+-- PctPopUnderPov: Percentage of people living under the poverty level in a given community (decimal).
+-- PctLess9thGrade: Percentage of people aged 25 years and over with less than a 9th grade education in a given community (decimal).
+-- PctNotHSGrad: Percentage of people aged 25 years and over that are not high school graduates in a given community (decimal).
+-- PctBSorMore: Percentage of people aged 25 years and over with a bachelors degree or higher education in a given community (decimal). 
+-- PctUnemployed: Percentage of people aged 16 years and over, in the labor force, and unemployed in a given community (decimal).
+-- PctEmploy: Percentage of people aged 16 years and over who are employed in a given community (decimal).
+-- PctEmplManu: Percentage of people aged 16 years and over who are employed in manufacturing in a given community (decimal).
+-- PctEmplProfServ: Percentage of people aged 16 years and over who are employed in professional services in a given community (decimal).
+-- PctOccupManu: Percentage of people aged 16 years and over who are employed in manufacturing (decimal). May include unemployed manufacturing workers. 
+-- PctOccupMgmtProf: Percentage of people aged 16 years and over who are employed in management or professional occupations in a given community (decimal).
+-- MalePctDivorce: Percentage of males who are divorced in a given community (decimal).
+-- MalePctNevMarr: Percentage of males who have never married in a given community (decimal).
+-- FemalePctDiv: Percentage of females who are divorced in a given community (decimal).
+-- TotalPctDiv: Percentage of population who are divorced in a given community (decimal).
+-- PersPerFam: Average number of people per family in a given community (decimal). 
+-- PctFam2Par: Percentage of families (with children) that are headed by two parents in a given community (decimal).
+-- Pctchildren2Par: Percentage of children in family housing with two parents in a given community (decimal).
+-- PctYoungchildren2Par: Percentage of children aged 4 years and under in two parent households in a given community (decimal). 
+-- PctTeen2Par: Percentage of children aged 12-17 years in two parent households in a given community (decimal).
+-- PctWorkMomYoungchildren: Percentage of mothers of children aged 6 years and under in labor force in a given community (decimal).
+-- PctWorkMom: Percentage of mothers of children aged under 18 years in labor force in a given community (decimal).
+-- NumchildrenBornNeverMar: Number of children born to never married individuals in a given community (integer).
+-- PctchildrenBornNeverMar: Percentage of children born to never married individuals in a given community (decimal).
+-- NumImmig: Number of people known to be foreign born in a given community (integer). 
+-- PctImmigRecent: Percentage of immigrants who immigrated within last 3 years in a given community (decimal). 
+-- PctImmigRec5: Percentage of immigrants who immigrated within last 5 years in a given community (decimal).
+-- PctImmigRec8: Percentage of immigrants who immigrated within last 8 years in a given community (decimal).
+-- PctImmigRec10: Percentage of immigrants who immigrated within last 10 years in a given community (decimal).
+-- PctRecentImmig: Percentage of population who have immigrated within the last 3 years in a given community (decimal).
+-- PctRecImmig5: Percentage of population who have immigrated within the last 5 years in a given community (decimal).
+-- PctRecImmig8: Percentage of population who have immigrated within the last 8 years in a given community (decimal).
+-- PctRecImmig10: Percentage of population who have immigrated within the last 10 years in a given community (decimal).
+-- PctSpeakEnglOnly: Percentage of people who speak only English in a given community (decimal).
+-- PctNotSpeakEnglWell: Percentage of people who do not speak English well in a given community (decimal).
+-- PctLargHouseFam: Percentage of family households that are large (6 or more individuals) in a given community (decimal).
+-- PctLargHouseOccup: Percentage of all occupied households that are large (6 or more individuals) in a given community (decimal).
+-- PersPerOccupHous: Average number of persons per household in a given community (decimal). 
+-- PersPerOwnOccHous: Average number of persons per owner occupied household in a given community (decimal).
+-- PersPerRentOccHous: Average number of persons per rental household in a given community (decimal).
+-- PctPersOwnOccup: Percentage of people in owner occupied households in a given community (decimal). 
+-- PctPersDenseHous: Percentage of persons in dense housing (more than 1 person per room) in a given community (decimal).
+-- PctHousLess3BR: Percentage of housing units with less than 3 bedrooms in a given community (decimal).
+-- MedNumBR: Median number of bedrooms within households in a given community (decimal).
+-- HousVacant: Number of vacant households in a given community (integer).
+-- PctHousOccup: Percentage of housing occupied in a given community (decimal).
+-- PctHousOwnOcc: Percentage of households that are owner occupied in a given community (decimal).
+-- PctVacantBoarded: Percentage of vacant housing that is boarded up in a given community (decimal). 
+-- PctVacMore6Mos: Percentage of vacant housing that has been vacant more than 6 months in a given community (decimal).
+-- MedYrHousBuilt: Median year that housing units were built age in a given community (integer).
+-- PctHousNoPhone: Percentage of occupied housing units without phone in a given community (decimal).
+-- PctWOFullPlumb: Percentage of housing without complete plumbing facilities in a given community (decimal).
+-- OwnOccLowQuart: Owner occupied housing in a given community (lower quartile value; decimal).
+-- OwnOccMedVal: Owner occupied housing in a given community (median value; decimal).
+-- OwnOccHiQuart: Owner occupied housing in a given community (upper quartile value; decimal).
+-- OwnOccQrange: Owner occupied housing in a given community (difference between upper quartile and lower quartile values; decimal).
+-- RentLowQ: Rental housing in a given community (lower quartile rent; decimal).
+-- RentMedian: Rental housing in a given community (median rent; decimal). 
+-- RentHighQ: Rental housing in a given community (upper quartile rent; decimal). 
+-- RentQrange: Rental housing in a given community (difference between upper quartile and lower quartile rent; decimal).
+-- MedRent: Median gross rent in a given community (includes utilities; decimal).
+-- MedRentPctHousInc: Median gross rent as a percentage of household income in a given community (decimal). 
+-- MedOwnCostPctInc: Median owners cost as a percentage of household income for owners with a mortgage in a given community (decimal).
+-- MedOwnCostPctIncNoMtg: Median owners cost as a percentage of household income for owners without a mortgage in a given community (decimal).
+-- NumInShelters: Number of people in homeless shelters in a given community (integer).
+-- NumStreet: Number of homeless people counted in the street in a given community (integer).
+-- PctForeignBorn: Percentage of people foreign born in a given community (decimal).
+-- PctBornSameState: Percentage of people born in the same state as currently living in a given community (decimal).
+-- PctSameHouse85: Percentage of people living in the same house for the previous 5 years in a given community (decimal).
+-- PctSameCity85: Percentage of people living in the same city for the previous 5 years in a given community (decimal).
+-- PctSameState85: Percentage of people living in the same state for the previous 5 years in a given community (decimal).
+-- LemasSwornFT: Number of sworn full time police officers in a given community (integer).
+-- LemasSwFTPerPop: Sworn full time police officers per 100,000 population in a given community (decimal).
+-- LemasSwFTFieldOps: Number of sworn full time police officers in field operations in a given community (i.e. on the street as opposed to administrative; integer).
+-- LemasSwFTFieldPerPop: Sworn full time police officers in field operations per 100,000 population in a given community (i.e. on the street as opposed to administrative; decimal).
+-- LemasTotalReq: Total number of requests for police in a given community in a given year (integer).
+-- LemasTotReqPerPop: Total number of requests for police per 100,000 popuation in a given community in a given year (decimal).
+-- PolicReqPerOffic: Total number of requests for police per police officer in a given community in a given year (decimal).
+-- PolicPerPop: Number of police officers per 100,000 population in a given community in a given year (decimal).
+-- RacialMatchCommPol: A measure of the racial match between the community and the police force in a given community . High values indicate proportions in community and police force are similar (decimal).
+-- PctPolicWhite: Percentage of police that are caucasian in a given community (decimal).
+-- PctPolicBlack: Percentage of police that are african american in a given community (decimal).
+-- PctPolicHisp: Percentage of police that are hispanic in a given community (decimal).
+-- PctPolicAsian: Percentage of police that are of asian heritage in a given community (decimal).
+-- PctPolicMinor: Percent of police that are minority of any kind in a given community (decimal).
+-- OfficAssgnDrugUnits: Number of police officers assigned to special drug units in a given community (integer).
+-- NumKindsDrugsSeiz: Number of different kinds of drugs seized in a given community in a given year (integer).
+-- PolicAveOTWorked: Average number of police officers who worked overtime in a given community in a given year (decimal).
+-- LandArea: Land area in square miles in a given community (decimal).
+-- PopDens: Population density in persons per square mile in a given community (decimal).
+-- PctUsePubTrans: Percentage of people using public transit for commuting in a given community (decimal).
+-- PolicCars: Number of police cars in a given community (integer).
+-- PolicOperBudg: Police operating budget in a given community (integer).
+-- LemasPctPolicOnPatr: Percentage of sworn full time police officers on patrol in a given community (decimal).
+-- LemasGangUnitDeploy: Gang units deployed in a given community (0 means NO, 10 means YES, 5 means Part Time).
+-- LemasPctOfficDrugUn: Percentage of police officers assigned to drug units in a given community (decimal).
+-- PolicBudgPerPop: Police operating budget per person in population in a given community (decimal).
+
+-- murders: Number of murders that took place in 1995 within a given community (integer). 
+-- murdPerPop: Number of murders per 100,000 population that took place in 1995 within a given community (decimal).
+-- rapes: number of rapes in 1995 (numeric - expected to be integer) potential GOAL attribute (to be predicted)
+-- rapesPerPop: number of rapes per 100K population (numeric - decimal) potential GOAL attribute (to be predicted)
+-- robberies: Number of robberies that took place in 1995 within a given community (integer). 
+-- robbbPerPop: Number of robberies per 100,000 population that took place in 1995 within a given community (decimal).
+-- assaults: Number of assaults that took place in 1995 within a given community (integer).
+-- assaultPerPop: Number of assaults per 100,000 population that took place in 1995 within a given community (decimal).
+-- burglaries: Number of burglaries that took place in 1995 within a given community (integer). 
+-- burglPerPop: Number of burglaries per 100,000 that took place in 1995 within a given community (decimal). 
+-- larcenies: Number of larcenies that took place in 1995 within a given community (integer). 
+-- larcPerPop: Number of larcenies per 100,000 population that took place in 1995 within a given community (decimal). 
+-- autoTheft: Number of auto thefts that took place in 1995 within a given community (integer). 
+-- autoTheftPerPop: Number of auto thefts per 100,000 population that took place in 1995 within a given community (decimal). 
+-- arsons: Number of arsons that took place in 1995 within a given community (integer).
+-- arsonsPerPop: Number of arsons per 100,000 population that took place in 1995 within a given community (decimal).
+-- ViolentCrimesPerPop: Number of violent crimes per 100,000 popuation that took place in 1995 within a given community (decimal). Violent crimes include murder, rape, robbery, and assault. 
+-- nonViolPerPop: Number of non-violent crimes per 100,000 popuation that took place in 1995 within a given community (decimal). Non-violent crimes include burglaries, larcenies, auto thefts, and arsons. 
